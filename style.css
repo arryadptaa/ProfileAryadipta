@@ -1,0 +1,193 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f5;
+    color: #333;
+}
+
+/* Menu Toggle */
+.menu-toggle {
+    font-size: 30px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    background-color: #222;
+    padding-top: 60px;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+/* Header dengan animasi RGB */
+.header {
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
+    background: linear-gradient(270deg, #4b83c4, #ff416c, #00c6ff, #0072ff);
+    background-size: 800% 800%;
+    animation: gradientAnimation 6s ease infinite;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+@keyframes gradientAnimation {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.animated-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    animation: fadeIn 3s ease, pulse 2s infinite;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes pulse {
+    0%, 100% { text-shadow: 0 0 10px #fff; }
+    50% { text-shadow: 0 0 20px #ff4b2b, 0 0 30px #00c6ff; }
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px 0;
+    border: 5px solid white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* Hobi Section */
+.hobby {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.hobby h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5em;
+    color: #222;
+}
+
+.hobby-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.hobby-item:hover {
+    transform: translateY(-10px);
+}
+
+.hobby-item img {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.hobby-item a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hobby-item a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-icons a {
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    background: #333;
+    padding: 15px 25px;
+    border-radius: 8px;
+}
+
+.contact-icons a:hover {
+    background: #555;
+    transform: scale(1.1);
+}
+
+.footer p {
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .hobby-item img {
+        width: 100%;
+    }
+
+    .contact-icons {
+        flex-direction: column;
+    }
+}
